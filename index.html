@@ -1,0 +1,105 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Calculator</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="css/bootstrap.css"> 
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/all.min.css">   
+  <link rel="stylesheet" href="css/v4-shims.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- ============================================ -->
+<div id="root">
+    <div class="calculator">
+   <div  class="display">
+      <div class="display-text">
+        <span>{{ display }}</span>
+      </div>
+    </div>
+    <div class="buttons"> 
+      <div class="button-row">
+        <div class="button2" @click="finalResult()">
+         <!--  <small style="font-size: 1.4vw;" >Tax</small><p>8%</p> -->
+         <div>
+        <div style="font-size:1vw; line-height: 1;">Tax</div>
+        <div style="font-size:1.5vw; line-height: 1;">8<span style="font-size:1vw;">%</span></div>           
+         </div>
+        </div>
+        <div class="button1" >{{ result }}<i class="fa fa-times-circle"  style="margin-left: auto;
+  padding-right: 10px;" @click="clear()"></i>
+        </div>        
+      </div>
+      <div class="button-row">
+        <div class="button" @click="number(9)">9</div>
+        <div class="button" @click="number(8)">8</div>
+        <div class="button" @click="number(7)">7</div>
+      </div>
+      <div class="button-row">
+        <div class="button" @click="number(6)">6</div>
+        <div class="button" @click="number(5)">5</div>
+        <div class="button" @click="number(4)">4</div>
+      </div>
+      <div class="button-row">
+        <div class="button" @click="number(3)">3</div>
+        <div class="button" @click="number(2)">2</div>
+        <div class="button" @click="number(1)">1</div>
+      </div>
+      <div class="button-row">
+        <div class="button" @click="unique('.')">.</div>
+        <div class="button" @click="number(0)">0</div>
+        <div class="button" @click="back()"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+        </div>
+      </div>
+
+    </div><!--buttons div -->
+  </div><!--calculator div -->
+</div> <!--root div -->
+
+
+
+
+
+
+  <!-- ============================================ -->
+
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <!-- <p>Hello world! This is HTML5 Boilerplate.</p>
+  <i class="fab fa-accessible-icon display-1"></i> -->
+  <!-- <script src="js/vendor/jquery-3.3.1.min.js"></script> -->
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/fontawesome.min.js"></script>
+      <!-- js code start here -->
+  <script src="js/vue.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+  
+  </script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+</html>
