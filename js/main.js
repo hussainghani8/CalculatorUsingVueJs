@@ -35,9 +35,14 @@
           this.display="0" ; 
           this.result = "";
         },
-        finalResult: function(){         
-         this.display= eval((this.result*8)/100);         
-         this.result= "";
+        finalResult: function(){  
+        if(this.result != "") {
+         var tax = eval((this.result*8)/100);         
+         this.display = eval(parseFloat(this.result) + tax) ;        
+         this.result= "";          
+        } else{
+          this.result = "";
+        }     
         },  
   
   },
